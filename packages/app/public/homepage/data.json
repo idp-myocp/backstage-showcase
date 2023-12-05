@@ -17,26 +17,6 @@
         "iconUrl": "/homepage/icons/icons8/github.png",
         "label": "GitHub",
         "url": "https://github.com/orgs/janus-idp"
-      },
-      {
-        "iconUrl": "/homepage/icons/icons8/slack-new.png",
-        "label": "Slack",
-        "url": "https://join.slack.com/t/janus-idp/shared_invite/zt-1pxtehxom-fCFtF9rRe3vFqUiFFeAkmg"
-      },
-      {
-        "iconUrl": "/homepage/icons/icons8/youtube-play.png",
-        "label": "YouTube Channel",
-        "url": "https://www.youtube.com/@januscommunity"
-      },
-      {
-        "iconUrl": "/homepage/icons/icons8/external-mailing-list-information-technology-solid-solidglyph-m-oki-orlando.png",
-        "label": "Mailing List",
-        "url": "https://groups.google.com/g/janus-idp-community"
-      },
-      {
-        "iconUrl": "/homepage/icons/icons8/tear-off-calendar.png",
-        "label": "Calendar",
-        "url": "https://calendar.google.com/calendar/u/0?cid=amFudXMuaWRwLmNvbW11bml0eUBnbWFpbC5jb20"
       }
     ]
   },
@@ -44,6 +24,26 @@
     "title": "Developer Tools",
     "isExpanded": true,
     "links": [
+      {
+        "iconUrl": "/homepage/icons/icons/confluence-logo.svg",
+        "label": "Confluence",
+        "url": "https://froberge.atlassian.net/wiki/home"
+      },
+      {
+        "iconUrl": "/homepage/icons/icons/jira-logo.svg",
+        "label": "Jira",
+        "url": "https://froberge.atlassian.net/jira"
+      },
+      {
+        "iconUrl": "/homepage/icons/icons8/github.png",
+        "label": "GitHub",
+        "url": "https://github.com/orgs/idp-myocp/"
+      },
+      {
+        "iconUrl": "/homepage/icons/icons8/devspaces.png",
+        "label": "OpenShift Dev Spaces",
+        "url": "https://devspaces.apps.home.myocp.net/"
+      },
       {
         "iconUrl": "/homepage/icons/podman_logo.svg",
         "label": "Podman Desktop",
@@ -58,7 +58,7 @@
       {
         "iconUrl": "/homepage/icons/argo-icon-color.svg",
         "label": "ArgoCD",
-        "url": "https://openshift-gitops-server-openshift-gitops.apps.janus.djpe.p1.openshiftapps.com/"
+        "url": "https://openshift-gitops-server-openshift-gitops.apps.home.myocp.net/"
       },
       {
         "iconUrl": "/homepage/icons/sonarqube.svg",
@@ -77,9 +77,9 @@
     "isExpanded": true,
     "links": [
       {
-        "iconUrl": "/homepage/icons/icons8/openshift.png",
-        "label": "OpenShift",
-        "url": "https://console-openshift-console.apps.janus.djpe.p1.openshiftapps.com/"
+        "iconUrl": "/homepage/icons/icons8/acm.png",
+        "label": "Cluster Mangement ...",
+        "url": "https://console-openshift-console.apps.home.myocp.net/multicloud/home/overview"
       }
     ]
   },
@@ -99,12 +99,12 @@
       {
         "iconUrl": "/homepage/icons/icons8/security-checked.png",
         "label": "GitHub Security",
-        "url": "https://github.com/orgs/janus-idp"
+        "url": "https://github.com/orgs/idp-myocp"
       },
       {
         "iconUrl": "/homepage/icons/keycloak.svg",
         "label": "Keycloak",
-        "url": "https://keycloak.apps.janus.djpe.p1.openshiftapps.com/"
+        "url": "https://sso.myocp.net"
       }
     ]
   }
