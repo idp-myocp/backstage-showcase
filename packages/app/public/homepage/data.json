@@ -77,7 +77,7 @@
     "isExpanded": true,
     "links": [
       {
-        "iconUrl": "/homepage/icons/icons8/acm.png",
+        "iconUrl": "https://github.com/idp-myocp/backstage-showcase/blob/main/packages/app/public/homepage/icons/icons8/acm.png",
         "label": "Cluster Mangement ...",
         "url": "https://console-openshift-console.apps.home.myocp.net/multicloud/home/overview"
       }
