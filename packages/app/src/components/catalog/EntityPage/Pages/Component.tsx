@@ -33,6 +33,7 @@ import {
   techdocsContent,
 } from '../Content';
 import { defaultEntityPage } from './DefaultEntity';
+import { EntityJiraOverviewCard, isJiraAvailable } from '@roadiehq/backstage-plugin-jira';
 
 const componentEntityPage = (componentType: 'service' | 'website') => (
   <EntityLayout>
@@ -129,6 +130,12 @@ export const componentPage = (
     <EntitySwitch.Case if={isComponentType('website')}>
       {componentEntityPage('website')}
     </EntitySwitch.Case>
+
+    <EntitySwitch.Case if={isJiraAvailable}>
+        <Grid item md={6}>
+          <EntityJiraOverviewCard />
+        </Grid>
+        </EntitySwitch.Case>
 
     <EntitySwitch.Case>{defaultEntityPage}</EntitySwitch.Case>
   </EntitySwitch>
