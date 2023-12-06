@@ -16,7 +16,7 @@ export const useQuickAccess = () => {
   } = useAsync(() => client.getHomeDataJson());
 
   const fetchData = useCallback(async () => {
-    const res = await fetch('/homepage/data.json');
+    const res = await fetch('https://github.com/idp-myocp/backstage-showcase/blob/main/packages/app/public/homepage/data.json');
     const qsData = await res.json();
     setData(qsData);
     setIsLoading(false);
