@@ -25,12 +25,12 @@
     "isExpanded": true,
     "links": [
       {
-        "iconUrl": "/homepage/icons/icons/confluence-logo.svg",
+        "iconUrl": "https://raw.githubusercontent.com/idp-myocp/backstage-showcase/main/packages/app/public/homepage/icons/confluence-logo.svg",
         "label": "Confluence",
         "url": "https://froberge.atlassian.net/wiki/home"
       },
       {
-        "iconUrl": "/homepage/icons/icons/jira-logo.svg",
+        "iconUrl": "/homepage/icons/jira-logo.svg",
         "label": "Jira",
         "url": "https://froberge.atlassian.net/jira"
       },
