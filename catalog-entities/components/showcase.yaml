@@ -23,6 +23,7 @@ metadata:
     backstage.io/kubernetes-namespace: janus-idp-prod
     sonarqube.org/project-key: janus-idp_backstage-showcase
     jira/project-key: ISSUEBD
+    jfrog-artifactory/image-name: backstage-showcase
 
 spec:
   type: website
