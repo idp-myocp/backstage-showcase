@@ -1,335 +1,132 @@
 app:
-  title: Janus IDP Backstage Showcase
   baseUrl: http://localhost:3000
-  # Plugin: Segment
-  analytics:
-    segment:
-      writeKey: ${SEGMENT_WRITE_KEY}
-      maskIP: ${SEGMENT_MASK_IP} # prevents IP addresses from being sent if true
-      testMode: ${SEGMENT_TEST_MODE} # prevents data from being sent if true
-
-organization:
-  name: My Org
-
+  title: Janus IDP Backstage Showcase
+argocd:
+  appLocatorMethods:
+  - instances:
+    - name: main
+      token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhcmdvY2QiLCJzdWIiOiJhcmdvY2QtZGV2b3BzOmFwaUtleSIsIm5iZiI6MTcwMTg3NDgyNSwiaWF0IjoxNzAxODc0ODI1LCJqdGkiOiIyOWI1YzI5OS0yYzNkLTQzNmEtOTJjMy0xMmI0MzJlNmVmYzYifQ.AF9mBFyXTNCFrs86-hO_yipzvAYnY0Cr63nHlrnN9kY'
+      url: https://argocd-for-dev-server-argocd-dev-instance.apps.home.myocp.net/
+    type: config
+auth:
+  environment: development
+  providers:
+    github:
+      development:
+        clientId: Iv1.7b80d2288a56fb19
+        clientSecret: 62651fccbb40fe2a09c5b43160b66fc79e402682
 backend:
-  # Used for enabling authentication, secret is shared by all backend plugins
-  # See https://backstage.io/docs/auth/service-to-service-auth for
-  # information on the format
   auth:
     keys:
-      - secret: ${BACKEND_AUTH_SECRET}
+    - secret: u95WN24xnXu7OUQL5j1qAAVC3TF9Re6
   baseUrl: http://localhost:7007
   listen:
     port: 7007
-    # Uncomment the following host directive to bind to specific interfaces
-    # host: 127.0.0.1
-  csp:
-    # Content-Security-Policy directives follow the Helmet format: https://helmetjs.github.io/#reference
-    # Default Helmet Content-Security-Policy values can be removed by setting the key to false
-    connect-src:
-      - "'self'"
-      - 'http:'
-      - 'https:'
-    # Plugin: Jira
-    img-src:
-      # "'self'" and 'data' are from the backstage default but must be set since img-src is overwritten
-      - "'self'"
-      - 'data:'
-      # Allow your Jira instance for @roadiehq/backstage-plugin-jira
-      - ${JIRA_URL}
   cors:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
     credentials: true
-  # This is for local development only, it is not recommended to use this in production
-  # The production database configuration is stored in app-config.production.yaml
   database:
     client: better-sqlite3
     connection: ':memory:'
-  # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
-
-integrations:
-  # Plugin: GitHub
-  github:
-    - host: github.com
-      # This is a GitHub App. You can find out how to generate this file, and more information
-      # about setting up the GitHub integration here: https://backstage.io/docs/integrations/github/github-apps
-      apps:
-        # - $include: github-app-backstage-showcase-credentials.yaml
-        - appId: ${GITHUB_APP_APP_ID}
-          webhookUrl: ${GITHUB_APP_WEBHOOK_URL}
-          clientId: ${GITHUB_APP_CLIENT_ID}
-          clientSecret: ${GITHUB_APP_CLIENT_SECRET}
-          webhookSecret: ${GITHUB_APP_WEBHOOK_SECRET}
-          privateKey: |
-            ${GITHUB_APP_PRIVATE_KEY}
-
-  # Plugin: GitLab
-  gitlab:
-    - host: ${GITLAB_HOST}
-      token: ${GITLAB_TOKEN}
-      apiBaseUrl: ${GITLAB_API_BASE_URL}
-
-  # Plugin: Azure DevOps
-  azure:
-    - host: dev.azure.com
-      token: ${AZURE_TOKEN}
-
-# Plugin: Azure DevOps
-azureDevOps:
-  host: dev.azure.com
-  token: ${AZURE_TOKEN}
-  organization: ${AZURE_ORG}
-
-proxy:
-  endpoints:
-    # Plugin: Quay
-    '/quay/api':
-      target: https://quay.io/
-      headers:
-        X-Requested-With: 'XMLHttpRequest'
-        # Uncomment the following line to access a private Quay Repository using a token
-        # Authorization: 'Bearer <YOUR TOKEN>'
-      changeOrigin: true
-      secure: true
-
-    # Plugin: SonarQube
-    '/sonarqube':
-      # if not using sonarqube, assign SONARQUBE_URL to https://sonarcloud.io
-      # target: https://sonarcloud.io/api
-      target: ${SONARQUBE_URL}/api
-      allowedMethods: ['GET']
-      auth: ${SONARQUBE_TOKEN}
-
-    # Plugin: Jenkins
-    '/jenkins/api':
-      target: ${JENKINS_URL}
-      headers:
-        Authorization: ${JENKINS_TOKEN}
-
-    # Plugin: Jira
-    '/jira/api':
-      target: ${JIRA_URL}
-      headers:
-        Authorization: ${JIRA_TOKEN}
-        Accept: 'application/json'
-        Content-Type: 'application/json'
-        X-Atlassian-Token: 'no-check'
-        User-Agent: ${JIRA_USER_AGENT}
-
-    # Plugin: Jfrog Artifactory
-    '/jfrog-artifactory/api':
-      target: ${ARTIFACTORY_URL}
-      headers:
-        Authorization: Bearer ${ARTIFACTORY_TOKEN}
-      # Change to "false" in case of using self hosted artifactory instance with a self-signed certificate
-      secure: ${ARTIFACTORY_SECURE}
-
-    # Plugin: PagerDuty
-    '/pagerduty':
-      target: https://api.pagerduty.com
-      headers:
-        Authorization: Token token=${PAGERDUTY_TOKEN}
-
-    # Plugin: Dynatrace
-    '/dynatrace':
-      target: ${DYNATRACE_API_URL}
-      headers:
-        # This API access token requires entities.read and problems.read permissions
-        # For more info on how to generate this token: https://www.dynatrace.com/support/help/dynatrace-api/basics/dynatrace-api-authentication
-        Authorization: 'Api-Token ${DYNATRACE_ACCESS_TOKEN}'
-
-
-
-# Reference documentation http://backstage.io/docs/features/techdocs/configuration
-# Note: After experimenting with basic setup, use CI/CD to generate docs
-# and an external cloud storage when deploying TechDocs for production use-case.
-# https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
-
-# Plugin: TechDocs
-techdocs:
-  builder: ${TECHDOCS_BUILDER_TYPE}
-  generator:
-    runIn: ${TECHDOCS_GENERATOR_TYPE}
-  publisher:
-    type: ${TECHDOCS_PUBLISHER_TYPE}
-    awsS3:
-      bucketName: ${BUCKET_NAME}
-      region: ${BUCKET_REGION_VAULT}
-      endpoint: ${BUCKET_URL}
-      s3ForcePathStyle: true
-      credentials:
-        accessKeyId: ${AWS_ACCESS_KEY_ID}
-        secretAccessKey: ${AWS_SECRET_ACCESS_KEY}
-
-auth:
-  # see https://backstage.io/docs/auth/ to learn about auth providers
-  environment: development
-  providers:
-    # Plugin: GitHub
-    github:
-      development:
-        clientId: ${GITHUB_APP_CLIENT_ID}
-        clientSecret: ${GITHUB_APP_CLIENT_SECRET}
-
-scaffolder:
-  # see https://backstage.io/docs/features/software-templates/configuration for software template options
-
+  cache:
+    store: memory
+confluence:
+  wikiUrl: changeme
+  spaces: ["changeme"]
+  auth:
+     username: demo 
+     password: changeme
 catalog:
   import:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
-  rules:
-    - allow: [Component, System, Group, Resource, Location, Template, API]
   locations:
-    - type: url
-      target: https://github.com/janus-idp/backstage-showcase/blob/main/catalog-entities/all.yaml
-
-    - type: url
-      target: https://github.com/janus-idp/software-templates/blob/main/showcase-templates.yaml
-
+  - target: https://github.com/idp-myocp/backstage-showcase/blob/main/catalog-entities/all.yaml
+    type: url
+  - target: https://github.com/idp-myocp/goldenpath-template/blob/main/template-index.yaml
+    type: url
   providers:
-    # Plugin: Keycloak
-    keycloakOrg:
-      default:
-        baseUrl: ${KEYCLOAK_BASE_URL}
-        loginRealm: ${KEYCLOAK_LOGIN_REALM}
-        realm: ${KEYCLOAK_REALM}
-        clientId: ${KEYCLOAK_CLIENT_ID}
-        clientSecret: ${KEYCLOAK_CLIENT_SECRET}
-
-    # Plugin: OCM
-    ocm:
-      default:
-        name: ${OCM_HUB_NAME}
-        url: ${OCM_HUB_URL}
-        serviceAccountToken: ${moc_infra_token}
-        owner: janus-authors
-
-    # Plugin: GitHub Org Data
+    confluence:
+      url: changeme
+      user: changeme
+      password: changeme
+      wikiUrl: changeme
+    github:
+      systemEntities:
+        catalogPath: /catalog-info.yaml
+        filters:
+          branch: master
+          repository: .*
+        organization: idp-myocp
+        schedule:
+          frequency:
+            minutes: 1
+          initialDelay:
+            seconds: 15
+          timeout:
+            minutes: 1
+      systems:
+        catalogPath: /systems/*.yaml
+        filters:
+          branch: main
+          repository: demo-systems
+        organization: idp-myocp
+        schedule:
+          frequency:
+            minutes: 1
+          initialDelay:
+            seconds: 15
+          timeout:
+            minutes: 1
     githubOrg:
       default:
-        id: production
-        orgUrl: ${GITHUB_ORG_URL}
-
-    # Plugin: GitHub Discovery
-    # uncomment following lines and set GITHUB_ORG to enable GitHub Discovery
-    # github:
-    #   providerId:
-    #     organization: "${GITHUB_ORG}"
-    
-    # User Group Discovery
-    # See https://backstage.io/docs/integrations/azure/org for more config options
-    microsoftGraphOrg:
-      default:
-        tenantId: ${AZURE_TENANT_ID}
-
-# Plugin: Kubernetes, OCM
-kubernetes:
-  customResources:
-    - group: 'tekton.dev'
-      apiVersion: 'v1beta1'
-      plural: 'pipelines'
-    - group: 'tekton.dev'
-      apiVersion: 'v1beta1'
-      plural: 'pipelineruns'
-    - group: 'tekton.dev'
-      apiVersion: 'v1beta1'
-      plural: 'taskruns'
-    - group: 'route.openshift.io'
-      apiVersion: 'v1'
-      plural: 'routes'
-  serviceLocatorMethod:
-    type: 'multiTenant'
-  clusterLocatorMethods:
-    - type: 'config'
-      clusters:
-        - name: ${K8S_CLUSTER_NAME}
-          url: ${K8S_CLUSTER_URL}
-          authProvider: 'serviceAccount'
-          skipTLSVerify: true
-          serviceAccountToken: ${K8S_CLUSTER_TOKEN}
-
-# Plugin: ArgoCD
-argocd:
-  username: ${ARGOCD_USERNAME}
-  password: ${ARGOCD_PASSWORD}
-  appLocatorMethods:
-    - type: 'config'
-      instances:
-        - name: argoInstance1
-          url: ${ARGOCD_INSTANCE1_URL}
-          token: ${ARGOCD_AUTH_TOKEN}
-        - name: argoInstance2
-          url: ${ARGOCD_INSTANCE2_URL}
-          token: ${ARGOCD_AUTH_TOKEN2}
-
-# Plugin: SonarQube
-sonarqube:
-  baseUrl: ${SONARQUBE_URL}
-  apiKey: ${SONARQUBE_TOKEN}
-
-# Plugin: Jenkins
-jenkins:
-  instances:
-    - name: default
-      baseUrl: ${JENKINS_URL}
-      username: ${JENKINS_USERNAME}
-      apiKey: ${JENKINS_TOKEN}
-
-# Plugin: PagerDuty
-pagerduty:
-  # uncomment the following, and provide a URL to override the default URL used for events
-  # eventsBaseUrl: <PagerDuty Event URL>
-
-# Plugin: Lighthouse
-lighthouse:
-  baseUrl: ${LIGHTHOUSE_BASEURL}
-
-# Plugin: Dynatrace
-dynatrace:
-  baseUrl: ${DYNATRACE_URL}
-
-# Plugin: Permission
-permission:
-  enabled: ${PERMISSION_ENABLED}
-  rbac:
-    admin:
-      users:
-        - name: group:default/admins
-    policies-csv-file: ${RBAC_POLICY_FILE}
-    database:
-      enabled: false
-
-enabled:
-  kubernetes: ${K8S_ENABLED}
-  techdocs: ${TECHDOCS_ENABLED}
-  argocd: ${ARGOCD_ENABLED}
-  sonarqube: ${SONARQUBE_ENABLED}
-  keycloak: ${KEYCLOAK_ENABLED}
-  ocm: ${OCM_ENABLED}
-  github: ${GITHUB_ENABLED}
-  githubOrg: ${GITHUB_ORG_ENABLED}
-  gitlab: ${GITLAB_ENABLED}
-  azureDevOps: ${AZURE_ENABLED}
-  jenkins: ${JENKINS_ENABLED}
-  permission: ${PERMISSION_ENABLED}
-  azureAd: ${AZURE_AD_ENABLED}
-  bitbucketDiscovery: ${BITBUCKET_DISCOVERY_ENABLED}
-
-# Plugin Confluence
-confluence:
-  # Confluence base URL for wiki API
-  # Typically: https://{org-name}.atlassian.net/wiki
-  wikiUrl: ${CONFLUENCE_URL}
-
-  # List of spaces to index
-  # See https://confluence.atlassian.com/conf59/spaces-792498593.html
-  spaces: [ENG]
-
-  # Authentication credentials towards Confluence API
-  auth:
-    username: ${CONFLUENCE_USERNAME}
-    # While Confluence supports BASIC authentication, using an API token is preferred.
-    # See: https://support.atlassian.com/atlassian-account/docs/manage-api-tokens-for-your-atlassian-account/
-    password: ${CONFLUENCE_PASSWORD}
+        id: development
+        orgUrl: https://github.com/idp-myocp
+  rules:
+  - allow:
+    - Component
+    - System
+    - Group
+    - Resource
+    - Location
+    - Template
+    - API
+integrations:
+  github:
+    - host: github.com
+      apps:
+        # - $include: github-app-backstage-showcase-credentials.yaml
+        - appId: 680062
+          clientId: Iv1.7b80d2288a56fb19
+          webhookUrl: changeme
+          webhookSecret: changme
+          clientSecret: 62651fccbb40fe2a09c5b43160b66fc79e402682
+          privateKey: |
+              -----BEGIN RSA PRIVATE KEY-----
+              MIIEogIBAAKCAQEAsTkk9z47MSZJPn7LVlixGGJz0fEOe+BCzX0dlsV2kf7EYMoj
+              D6HQIFraiykLjlaVCje23h/zTUrXLF9PT0ChmlY8/WSI8F4BwzQJ56r7GyyaRkwD
+              8SBmEFCbxp0xyKq1VSWFnRBNq6QfydVFjzAHMD3BJGh1eGE9iEuu4+pklqsaNXoV
+              vhiLd1IcOY57Md6aYzGQm+ywMRMza5xscr63TqFdh13AjogwdTkrjjPD1c/tY0Q7
+              DN/M3u9PFyu1sg8xfIKZ58tJpZKj4ZfXuV6rCx3I+CMQoSC7nWHqGzh3KW7mmGlf
+              oCDCQy7QWAbLq4jH9NnbpKgiIusW5SCx1f+qrwIDAQABAoIBADnNOIhHTMkAAr2W
+              Xz1/WetpGPttUtsGTuN0njTxnHWLkYM8CmlrzlTvLP5cWb+H775QY51Y8GLSORHo
+              2BYyL0MGQ4glxSAYmRyQmXZs5s97Iaox2stHVOKXV+dUl8sqGlB2F3kduydzNUb/
+              /1rvQDj0u0zjoQStOoN8o8METOByzOPY3D9TsFl8n5H1PI2aL69LTW0Kv9jeakV0
+              DMUh/HieKtAhKPbMNxrfjKWhz9QM13NCj4i3Lo9YqsjQ13d3979WceDRMmsQYZ6I
+              xZLrw1JoOrt0xa8i08u7JKMMJ3CgqnbKmzztag9LcCRqh3YoCN0ufYSgdK9+L4Ox
+              /OA4nykCgYEA3S/ib6K7KVVQT72NP/Ir8P6RYtADzbnjNENTn5OyR6PyJuJ9OLGu
+              Es+Gt+VILxZDOYzkwxtW0yVozylqzcRXtmSvlbBh/4VaMSVheFpwLXGRKTILIvQs
+              mOwoU8GKcLIs97L5NK7wui5SOKmjDFLCJ4kBV/x9wEJte2Sikn5yq/sCgYEAzR3c
+              J2dz832nAOAGFnuJQU+C1u0SIiZXnRgvGIZ8Bul+fMmZAVqasFkAxcgBimbwS0Gl
+              s6rjcYhJbe8fk+KPsSPMcFBt9SYRRsg1UTrp9ecdfdLqFI2CSWTc4kqs9BiqP5PB
+              wIYJfbH9I8Lo1T5o0EoIE7XLlW/UB9HeIc6CKd0CgYBYHwG5tD2YxBKRElW6CkOT
+              afiGQ5WgWtS4N7KTOwamIB0TfNyiv7c4a1Gi5kgR6m6x+P4S9UtsJ9VP45JXlEfV
+              tNt3aaRBZuF9/wSMLIvQrxREM1nYfStfaYbPh6YeK/5aWQWMBb6GjnnXdU4uVLJh
+              ieXtJfz7oft4U6mpb5NEDQKBgFQEExUgzuHBahJ1sIis+T+DLfiTCoZqZiC2szO8
+              gjjikyjR+pYPYqUxD5vznI3wNCTfMtww9xCd3lXlSG3usyS/oRGwIBn2CcWQZCZt
+              lz9d9zp+ldrtS5x8b+1Q4R7qq3F3ODl/rYuKyEFJqM0Pzybh7AUGxejj8VlyoSX/
+              zFkRAoGACIem6SwidglD7hT+YPMZV6F3tziaB7le3/lbjGPZdFjI6Tb61s1iVio7
+              gXF4mPVhDq+4khyCQI8I97VG+mRFzsQusRpNdQigU8ZSZw1AQJBzLbtd4gQmz4X9
+              zkDxuZx1SA680GIq9uMTN8rJiA647DC0PthVv6AJ1BqWzrNKiIU=
+              -----END RSA PRIVATE KEY-----
