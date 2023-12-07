@@ -70,6 +70,12 @@
         "label": "Quay.io",
         "url": "https://quay.io/"
       }
+      {
+        "iconUrl": "/homepage/icons/jfrog-logo.svg",
+        "label": "Artifactory",
+        "url": "https://froberge.jfrog.io/"
+      }
+
     ]
   },
   {
