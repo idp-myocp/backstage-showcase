@@ -17,12 +17,13 @@ metadata:
   annotations:
     argocd/app-name: 'janus-idp'
     backstage.io/kubernetes-id: 'janus-idp'
-    github.com/project-slug: janus-idp/backstage-showcase
-    quay.io/repository-slug: janus-idp/backstage-showcase
-    backstage.io/techdocs-ref: url:https://github.com/janus-idp/backstage-showcase
+    github.com/project-slug: idp-myocp/backstage-showcase
+    quay.io/repository-slug: idp-myocp/backstage-showcase
+    backstage.io/techdocs-ref: url:https://github.com/idp-myocp/backstage-showcase
     backstage.io/kubernetes-namespace: janus-idp-prod
     sonarqube.org/project-key: janus-idp_backstage-showcase
     jira/project-key: ISSUEBD
+    jira/token-type: Bearer
 spec:
   type: website
   system: janus-idp

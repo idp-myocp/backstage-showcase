@@ -1915,6 +1915,13 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@babel/runtime@^7.23.2":
+  version "7.23.5"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.23.5.tgz#11edb98f8aeec529b82b211028177679144242db"
+  integrity sha512-NdUTHcPe4C99WxPub+K9l9tK5/lV4UXIoaHSYgzco9BCyjKAAwzdBI+wWtYqHt7LJdbo74ZjRPJgzVweq1sz0w==
+  dependencies:
+    regenerator-runtime "^0.14.0"
+
 "@babel/template@^7.22.5", "@babel/template@^7.3.3":
   version "7.22.5"
   resolved "https://registry.yarnpkg.com/@babel/template/-/template-7.22.5.tgz#0c8c4d944509875849bd0344ff0050756eefc6ec"
@@ -3000,7 +3007,7 @@
     zen-observable "^0.10.0"
     zod "^3.21.4"
 
-"@backstage/core-components@^0.13.8":
+"@backstage/core-components@^0.13.6", "@backstage/core-components@^0.13.8":
   version "0.13.8"
   resolved "https://registry.yarnpkg.com/@backstage/core-components/-/core-components-0.13.8.tgz#4b45fec4b03601677d9b1d6279f2d8874ada176a"
   integrity sha512-isQB7WXrw1QsDZ2njSwah7L4L8aGQsu/GZCHEtXkV/0A54ZWOuYXzW4ME4Vcjh7UPXOdhejeBi+B3gHlWURRXA==
@@ -3074,7 +3081,7 @@
     prop-types "^15.7.2"
     zen-observable "^0.10.0"
 
-"@backstage/core-plugin-api@^1.8.0":
+"@backstage/core-plugin-api@^1.7.0", "@backstage/core-plugin-api@^1.8.0":
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/@backstage/core-plugin-api/-/core-plugin-api-1.8.0.tgz#97e87e13dcc5a65cb65e883d67d4387c7a42db32"
   integrity sha512-yZ52w8Msf6cwLAf97bQKDqEWHA0N3ikRejYHFSn6hb3IVTgxV738m4ybFdgULVEAZFLrATs7nzu+UI3rqoVeZg==
@@ -3840,7 +3847,7 @@
     yaml "^2.0.0"
     zen-observable "^0.10.0"
 
-"@backstage/plugin-catalog-react@^1.9.1":
+"@backstage/plugin-catalog-react@^1.8.5", "@backstage/plugin-catalog-react@^1.9.1":
   version "1.9.1"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-catalog-react/-/plugin-catalog-react-1.9.1.tgz#80d3ba027499c704bffbb11d877b3e871f557499"
   integrity sha512-ucuJCVfHEdEsRLv3nv9Ds1eybkKzaDYKqt7KUb2rc/WfNiSZpsaf0/fWYfR/hNIAmxlE3o9PRuLN6wv5v8Ah9w==
@@ -5154,7 +5161,7 @@
     "@emotion/styled" "^11.10.5"
     "@mui/material" "^5.12.2"
 
-"@backstage/theme@^0.4.4":
+"@backstage/theme@^0.4.3", "@backstage/theme@^0.4.4":
   version "0.4.4"
   resolved "https://registry.yarnpkg.com/@backstage/theme/-/theme-0.4.4.tgz#807735b58a5e1b2a0cdb50fc05ad83656f2f66cb"
   integrity sha512-Mvs0FrEnQtyO2dVNPyo1wjkNHbN3vefIdj4V27SFiX9W9sj+R1b4rzFACF6xjVzfdV9oo9HdsL59CMnFlDxz4Q==
@@ -6324,20 +6331,21 @@
     prop-types "^15.7.2"
     react-use "^17.2.4"
 
-"@janus-idp/backstage-plugin-jfrog-artifactory@1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@janus-idp/backstage-plugin-jfrog-artifactory/-/backstage-plugin-jfrog-artifactory-1.1.0.tgz#787f6e25b3f1c9baec98cfef400d7240b16df6dc"
-  integrity sha512-oD6K6hERHVndMewm/Kq691tUEUEo9oDHeRmhHQmDzP0V4ADwv+2d2KhsPopN46mr2Tsyios4lJymmxCLQ26Esg==
+"@janus-idp/backstage-plugin-jfrog-artifactory@^1.2.14":
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/@janus-idp/backstage-plugin-jfrog-artifactory/-/backstage-plugin-jfrog-artifactory-1.2.14.tgz#7c5ac92ff3037ad94b4e24ddb82a86bd9b47bf32"
+  integrity sha512-giOo/aLr6gn1KLfiyOYVPgTItlhvrfDK/xlJJZ+qCbSmFxbO90clnxjL9fa7EobFX5patF5hha/6UsW742bxkQ==
   dependencies:
-    "@backstage/catalog-model" "^1.4.1"
-    "@backstage/core-components" "^0.13.3"
-    "@backstage/core-plugin-api" "^1.5.3"
-    "@backstage/plugin-catalog-react" "^1.8.0"
-    "@backstage/theme" "^0.4.1"
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/core-components" "^0.13.6"
+    "@backstage/core-plugin-api" "^1.7.0"
+    "@backstage/plugin-catalog-react" "^1.8.5"
+    "@backstage/theme" "^0.4.3"
+    "@janus-idp/shared-react" "2.0.1"
     "@material-ui/core" "^4.9.13"
-    "@material-ui/icons" "^4.9.1"
+    "@material-ui/icons" "^4.11.3"
     "@material-ui/lab" "^4.0.0-alpha.45"
-    react-use "^17.2.4"
+    react-use "^17.4.0"
 
 "@janus-idp/backstage-plugin-keycloak-backend@1.5.3":
   version "1.5.3"
@@ -6517,6 +6525,17 @@
     date-fns "^2.30.0"
     lodash "^4.17.19"
     mathjs "^11.9.1"
+
+"@janus-idp/shared-react@2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@janus-idp/shared-react/-/shared-react-2.0.1.tgz#03fcdef5261ef539f32d14ddd2181737531e11b5"
+  integrity sha512-zxrbizXtI2Nmulbs0UiVg/mM1aJk61rIA5wfo730dr8x+Lx4OEo/y5h43ldP53eRkN/G2f33rvJSncuvAXnn+w==
+  dependencies:
+    "@kubernetes/client-node" "^0.19.0"
+    classnames "^2.3.2"
+    date-fns "^2.30.0"
+    lodash "^4.17.21"
+    mathjs "^11.11.2"
 
 "@jest-mock/express@^2.0.1":
   version "2.0.2"
@@ -6912,7 +6931,7 @@
   optionalDependencies:
     openid-client "^5.3.0"
 
-"@kubernetes/client-node@0.19.0":
+"@kubernetes/client-node@0.19.0", "@kubernetes/client-node@^0.19.0":
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/@kubernetes/client-node/-/client-node-0.19.0.tgz#ebd2121e5c8dc1a47ff1b2574bda1e760d0abb82"
   integrity sha512-WTOjGuFQ8yeW3+qD6JrAYhpwpoQbe9R8cA/61WCyFrNawSTUgLstHu7EsZRYEs39er3jDn3wCEaczz+VOFlc2Q==
@@ -7028,7 +7047,7 @@
     react-is "^16.8.0 || ^17.0.0"
     react-transition-group "^4.4.0"
 
-"@material-ui/icons@^4.9.1":
+"@material-ui/icons@^4.11.3", "@material-ui/icons@^4.9.1":
   version "4.11.3"
   resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-4.11.3.tgz#b0693709f9b161ce9ccde276a770d968484ecff1"
   integrity sha512-IKHlyx6LDh8n19vzwH5RtHIOHl9Tu90aAAxcbWME6kp4dmvODM3UvOHJeMIDzUbd4muuJKHmlNoBN+mDY4XkBA==
@@ -14162,7 +14181,7 @@ cjs-module-lexer@^1.0.0:
   resolved "https://registry.yarnpkg.com/cjs-module-lexer/-/cjs-module-lexer-1.2.3.tgz#6c370ab19f8a3394e318fe682686ec0ac684d107"
   integrity sha512-0TNiGstbQmCFwt4akjjBg5pLRTSyj/PkWQ1ZoO2zntmg9yLqSRxwEa4iCfQLGjqhiqBfOJa7W/E8wfGrTDmlZQ==
 
-classnames@2.3.2, classnames@2.x, classnames@^2.2.6, classnames@^2.3.1:
+classnames@2.3.2, classnames@2.x, classnames@^2.2.6, classnames@^2.3.1, classnames@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.2.tgz#351d813bf0137fcc6a76a16b88208d2560a0d924"
   integrity sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==
@@ -17446,6 +17465,11 @@ fp-ts@^2.10.0:
   version "2.16.1"
   resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.16.1.tgz#6abc401ce42b65364ca8f0b0d995c5840c68a930"
   integrity sha512-by7U5W8dkIzcvDofUcO42yl9JbnHTEDBrzu3pt5fKT+Z4Oy85I21K80EYJYdjQGC2qum4Vo55Ag57iiIK4FYuA==
+
+fraction.js@4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.3.4.tgz#b2bac8249a610c3396106da97c5a71da75b94b1c"
+  integrity sha512-pwiTgt0Q7t+GHZA4yaLjObx4vXmmdcS0iSJ19o8d/goUGgItX9UZWKWNnLHehxviD8wU2IWRsnR8cD5+yOJP2Q==
 
 fraction.js@^4.2.0:
   version "4.2.1"
@@ -20827,6 +20851,21 @@ material-ui-popup-state@^1.9.3:
     "@material-ui/types" "^6.0.1"
     classnames "^2.2.6"
     prop-types "^15.7.2"
+
+mathjs@^11.11.2:
+  version "11.12.0"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-11.12.0.tgz#e933e5941930d44763ddfc5bfb08b90059449b2c"
+  integrity sha512-UGhVw8rS1AyedyI55DGz9q1qZ0p98kyKPyc9vherBkoueLntPfKtPBh14x+V4cdUWK0NZV2TBwqRFlvadscSuw==
+  dependencies:
+    "@babel/runtime" "^7.23.2"
+    complex.js "^2.1.1"
+    decimal.js "^10.4.3"
+    escape-latex "^1.2.0"
+    fraction.js "4.3.4"
+    javascript-natural-sort "^0.7.1"
+    seedrandom "^3.0.5"
+    tiny-emitter "^2.1.0"
+    typed-function "^4.1.1"
 
 mathjs@^11.9.1:
   version "11.10.0"
@@ -26819,6 +26858,11 @@ typed-function@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-4.1.0.tgz#da4bdd8a6d19a89e22732f75e4a410860aaf9712"
   integrity sha512-DGwUl6cioBW5gw2L+6SMupGwH/kZOqivy17E4nsh1JI9fKF87orMmlQx3KISQPmg3sfnOUGlwVkroosvgddrlg==
+
+typed-function@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/typed-function/-/typed-function-4.1.1.tgz#38ce3cae31f4f513bcb263563fdad27b2afa73e8"
+  integrity sha512-Pq1DVubcvibmm8bYcMowjVnnMwPVMeh0DIdA8ad8NZY2sJgapANJmiigSUwlt+EgXxpfIv8MWrQXTIzkfYZLYQ==
 
 typed-rest-client@^1.8.4:
   version "1.8.11"
