@@ -63,7 +63,7 @@
       {
         "iconUrl": "/homepage/icons/sonarqube.svg",
         "label": "SonarQube",
-        "url": "https://sonarqube.apps.janus.djpe.p1.openshiftapps.com/"
+        "url": "http://sonarqube-cicd-tools.apps.home.myocp.net/"
       },
       {
         "iconUrl": "/homepage/icons/quay.svg",
