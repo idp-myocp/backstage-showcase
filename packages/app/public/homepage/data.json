@@ -89,6 +89,16 @@
     ]
   },
   {
+    "title": "Monitoring Tools",
+    "links": [
+      {
+        "iconUrl": "/homepage/icons/icons8/system-task.png",
+        "label": "Grafana (Coming Soon)",
+        "url": ""
+      }
+    ]
+  },
+  {
     "title": "Security Tools",
     "links": [
       {
