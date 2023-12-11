@@ -84,20 +84,20 @@
       {
         "iconUrl": "/homepage/icons/icons8/acm.png",
         "label": "Cluster Mangement ...",
-        "url": "https://console-openshift-console.apps.home.myocp.net/multicloud/home/overview"
+        "url": "https://console-openshift-console.apps.home.myocp.net/dashboards"
       }
     ]
   },
-  {
-    "title": "Monitoring Tools",
-    "links": [
-      {
-        "iconUrl": "/homepage/icons/icons8/system-task.png",
-        "label": "Grafana (Coming Soon)",
-        "url": ""
-      }
-    ]
-  },
+  // {
+  //   "title": "Monitoring Tools",
+  //   "links": [
+  //     {
+  //       "iconUrl": "/homepage/icons/icons8/system-task.png",
+  //       "label": "Grafana (Coming Soon)",
+  //       "url": ""
+  //     }
+  //   ]
+  // },
   {
     "title": "Security Tools",
     "links": [
