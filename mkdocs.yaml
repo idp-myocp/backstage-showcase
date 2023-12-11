@@ -1,6 +1,6 @@
 site_name: backstage-showcase
 site_description: 'User documentation for Janus Showcase'
-repo_url: https://github.com/janus-idp/backstage-showcase
+repo_url: https://github.com/idp-myocp/backstage-showcase
 edit_uri: edit/main/docs
 
 plugins:
