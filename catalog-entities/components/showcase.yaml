@@ -4,7 +4,7 @@ metadata:
   name: backstage-showcase
   title: Backstage Showcase
   description: |
-    This is the Janus Community Showcase of Backstage.io
+    This is a showcase of Red Hat Developer Hub Showcase, base on the Janus Showcase of Backstage.io
   links:
     - title: Janus Website
       url: https://janus-idp.io
@@ -12,16 +12,15 @@ metadata:
       url: https://showcase.janus-idp.io/
     - title: Blog
       url: https://janus-idp.io/blog
-    - title: Slack
+    - title: Slack - Janus
       url: https://join.slack.com/t/janus-idp/shared_invite/zt-1pxtehxom-fCFtF9rRe3vFqUiFFeAkmg
   annotations:
-    argocd/app-name: 'janus-idp'
-    backstage.io/kubernetes-id: 'janus-idp'
+    argocd/app-name: 'backstage-showcase-dev'
+    backstage.io/kubernetes-id: 'backstage-showcase'
     github.com/project-slug: idp-myocp/backstage-showcase
     backstage.io/techdocs-ref: url:https://github.com/idp-myocp/backstage-showcase
-    backstage.io/kubernetes-namespace: janus-idp-prod
-    sonarqube.org/project-key: janus-idp_backstage-showcase
-    jira/project-key: ISSUEBD
+    backstage.io/kubernetes-namespace: developer-hub
+    sonarqube.org/project-key: backstage-showcase
     jfrog-artifactory/image-name: backstage-showcase
 
 spec:
