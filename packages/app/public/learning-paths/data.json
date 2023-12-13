@@ -1,6 +1,13 @@
 [
   {
-    "paths": 66,
+    "paths": 1,
+    "minutes": 5,
+    "description": "Learn how to use POdman inside of a Kubernetes instance.",
+    "label": "How to use Podman inside of Kubernetes",
+    "url": "https://www.redhat.com/sysadmin/podman-inside-kubernetes"
+  },
+  {
+    "paths": 6,
     "minutes": 20,
     "description": "Learn about k8s API fundamentals and the etcd operator, as well as how to use the Operator SDK with Go and Helm, review Ansible basics, and use Ansible to deploy Kubernetes modules.",
     "label": "Building Operators on OpenShift",
