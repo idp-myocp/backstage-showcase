@@ -48,7 +48,7 @@ const learningPathLengthInfo = (path: Path) => {
 const LearningPathCards = () => {
   const { classes } = useStyles();
   const { data, error, isLoading } = useSWR(
-    '/learning-paths/data.json',
+    'https://raw.githubusercontent.com/idp-myocp/backstage-showcase/main/packages/app/public/learning-paths/data.json',
     fetcher<Path>,
   );
 
