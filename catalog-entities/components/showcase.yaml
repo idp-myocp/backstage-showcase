@@ -22,7 +22,8 @@ metadata:
     backstage.io/kubernetes-namespace: developer-hub
     sonarqube.org/project-key: backstage-showcase
     jfrog-artifactory/image-name: backstage-showcase
-
+    lighthouse.com/website-url: https://backstage-developer-hub.apps.home.myocp.net/
+    
 spec:
   type: website
   system: janus-idp
