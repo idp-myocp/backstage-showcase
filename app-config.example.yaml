@@ -21,6 +21,8 @@ backend:
       - 'self'
       - 'http:'
       - 'https:'
+    frame-src:
+      - ${LIGHTHOUSE_URL}
   cors:
     origin: http://localhost:3000
     methods: [GET, HEAD, PATCH, POST, PUT, DELETE]
@@ -83,7 +85,7 @@ techdocs:
     type: awsS3
 
 lighthouse:
-  baseUrl: temp
+  baseUrl: ${LIGHTHOUSE_URL}
 
 dynatrace:
   baseUrl: temp
