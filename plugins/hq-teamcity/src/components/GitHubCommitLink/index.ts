@@ -1,1 +1,0 @@
-export { GitHubCommitLink } from './GitHubCommitLink';
