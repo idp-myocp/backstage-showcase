@@ -84,7 +84,7 @@
       {
         "iconUrl": "/homepage/icons/icons8/acm.png",
         "label": "Cluster Mangement ...",
-        "url": "https://console-openshift-console.apps.home.myocp.net/dashboards"
+        "url": "https://console-openshift-console.apps.hub.myocp.net/dashboards"
       }
     ]
   },
