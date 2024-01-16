@@ -5769,6 +5769,22 @@
     uuid "^9.0.0"
     winston "^3.2.1"
 
+"@janus-idp/backstage-plugin-nexus-repository-manager@^1.4.18":
+  version "1.4.18"
+  resolved "https://registry.yarnpkg.com/@janus-idp/backstage-plugin-nexus-repository-manager/-/backstage-plugin-nexus-repository-manager-1.4.18.tgz#7df4d4452cd479c5c0e9acbad63227f0927856eb"
+  integrity sha512-w2RZrwT7wT3qAk3ljqV/ROKvkdBGWyqrJAeeHxSTQYgfTOILGLpCH4ZbV22HpaO6HH1TC8ptDZqY69qSlAB18A==
+  dependencies:
+    "@backstage/catalog-model" "^1.4.3"
+    "@backstage/core-components" "^0.13.6"
+    "@backstage/core-plugin-api" "^1.7.0"
+    "@backstage/plugin-catalog-react" "^1.8.5"
+    "@backstage/theme" "^0.4.3"
+    "@janus-idp/shared-react" "2.4.0"
+    "@material-ui/core" "^4.9.13"
+    "@material-ui/icons" "^4.11.3"
+    "@material-ui/lab" "^4.0.0-alpha.45"
+    react-use "^17.4.0"
+
 "@janus-idp/backstage-plugin-ocm-backend@3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@janus-idp/backstage-plugin-ocm-backend/-/backstage-plugin-ocm-backend-3.1.1.tgz#ea268ad428ffcf8d9c9f390f7af757c2e264e887"
@@ -5941,6 +5957,18 @@
     "@kubernetes/client-node" "^0.19.0"
     classnames "^2.3.2"
     date-fns "^2.30.0"
+    lodash "^4.17.21"
+    mathjs "^11.11.2"
+
+"@janus-idp/shared-react@2.4.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@janus-idp/shared-react/-/shared-react-2.1.0.tgz#7af7cca9c71dd026243b9718254a15deff82ed98"
+  integrity sha512-nZcmMhb47KSW9mPIHQKtnNTNhy97faG+GfhwSh3zpCEsIaCDAEZhrFyM3UIpB6sLY5xHchQRNnKD8YJhuYOVCQ==
+  dependencies:
+    "@kubernetes/client-node" "^0.19.0"
+    classnames "^2.3.2"
+    date-fns "^2.30.0"
+    file-saver "^2.0.5"
     lodash "^4.17.21"
     mathjs "^11.11.2"
 
