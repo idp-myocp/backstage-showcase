@@ -45,10 +45,10 @@
     "@backstage/plugin-sonarqube-backend": "^0.2.11",
     "@backstage/plugin-techdocs-backend": "^1.9.2",
     "@immobiliarelabs/backstage-plugin-gitlab-backend": "6.1.0",
-    "@janus-idp/backstage-plugin-3scale-backend": "^1.1.1",
+    "@janus-idp/backstage-plugin-3scale-backend": "1.1.1",
     "@janus-idp/backstage-plugin-keycloak-backend": "1.5.3",
     "@janus-idp/backstage-plugin-ocm-backend": "3.1.1",
-    "@janus-idp/backstage-plugin-rbac-backend": "^1.1.0",
+    "@janus-idp/backstage-plugin-rbac-backend": "1.1.0",
     "@k-phoen/backstage-plugin-confluence-backend": "^0.0.14",
     "@microcks/microcks-backstage-provider": "^0.0.3",
     "@roadiehq/backstage-plugin-argo-cd-backend": "2.11.1",
@@ -66,8 +66,7 @@
   "devDependencies": {
     "@backstage/cli": "^0.25.1",
     "@types/dockerode": "3.3.19",
-    "@types/express": "4.17.17",
-    "@types/express-serve-static-core": "4.17.36"
+    "@types/express": "4.17.17"
   },
   "files": [
     "dist"

@@ -14,7 +14,8 @@
     "tsc": "tsc",
     "clean": "turbo run clean",
     "test": "turbo run test",
-    "fix": "backstage-cli repo fix",
+    "test:e2e": "turbo run test:e2e",
+    "test:e2e-ci": "turbo run test:e2e-ci",
     "lint": "turbo run lint",
     "lint-staged": "lint-staged",
     "prettier:check": "prettier --ignore-unknown --check .",
@@ -43,8 +44,11 @@
     "typescript": "5.2.2"
   },
   "resolutions": {
-    "@types/react": "17.0.69",
-    "@types/react-dom": "17.0.22"
+    "@types/react": "17.0.65",
+    "@types/react-dom": "17.0.20",
+    "swagger-ui-react/react": "17.0.2",
+    "swagger-ui-react/react-dom": "17.0.2",
+    "swagger-ui-react/react-redux": "^8"
   },
   "prettier": "@spotify/prettier-config",
   "lint-staged": {
