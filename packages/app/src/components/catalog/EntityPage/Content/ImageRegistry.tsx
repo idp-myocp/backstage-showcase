@@ -7,6 +7,10 @@ import {
 import { QuayPage, isQuayAvailable } from '@janus-idp/backstage-plugin-quay';
 import Grid from '@mui/material/Grid';
 import React from 'react';
+import {
+  isNexusRepositoryManagerAvailable,
+  NexusRepositoryManagerPage,
+} from '@janus-idp/backstage-plugin-nexus-repository-manager';
 
 const ifImageRegistries: ((e: Entity) => boolean)[] = [
   isQuayAvailable,
@@ -30,6 +34,13 @@ export const imageRegistry = (
           <JfrogArtifactoryPage />
         </Grid>
       </EntitySwitch.Case>
+
+      <EntitySwitch.Case if={isNexusRepositoryManagerAvailable}>
+        <Grid item xs={12}>
+          <NexusRepositoryManagerPage />
+        </Grid>
+      </EntitySwitch.Case>
+
     </EntitySwitch>
   </Grid>
 );
