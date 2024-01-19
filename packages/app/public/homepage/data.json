@@ -74,7 +74,7 @@
         "iconUrl": "/homepage/icons/nexusrepo.png",
         "label": "Nexus Repository",
         "url": "http://nexus3-nexus.apps.home.myocp.net"
-      },
+      }
     ]
   },
   {
