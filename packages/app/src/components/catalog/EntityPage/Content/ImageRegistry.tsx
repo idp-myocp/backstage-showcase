@@ -5,16 +5,17 @@ import {
   isJfrogArtifactoryAvailable,
 } from '@janus-idp/backstage-plugin-jfrog-artifactory';
 import { QuayPage, isQuayAvailable } from '@janus-idp/backstage-plugin-quay';
-import Grid from '@mui/material/Grid';
-import React from 'react';
 import {
   isNexusRepositoryManagerAvailable,
   NexusRepositoryManagerPage,
 } from '@janus-idp/backstage-plugin-nexus-repository-manager';
+import Grid from '@mui/material/Grid';
+import React from 'react';
 
 const ifImageRegistries: ((e: Entity) => boolean)[] = [
   isQuayAvailable,
   isJfrogArtifactoryAvailable,
+  isNexusRepositoryManagerAvailable
 ];
 
 export const isImageRegistriesAvailable = (e: Entity) =>
