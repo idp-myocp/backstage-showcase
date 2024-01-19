@@ -71,10 +71,10 @@
         "url": "https://quay.io/"
       },
       {
-        "iconUrl": "/homepage/icons/jfrog-logo.svg",
-        "label": "Artifactory",
-        "url": "https://froberge.jfrog.io/"
-      }
+        "iconUrl": "/homepage/icons/nexusrepo.png",
+        "label": "Nexus Repository",
+        "url": "http://nexus3-nexus.apps.home.myocp.net"
+      },
     ]
   },
   {
