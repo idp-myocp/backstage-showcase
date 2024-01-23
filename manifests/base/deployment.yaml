@@ -47,9 +47,9 @@ spec:
             - secretRef:
                 name: backstage-showcase-bucket-claim
             - configMapRef:
-                name: backstage-bucket-claim
+                name: backstage-claim
             - secretRef:
-                name: backstage-bucket-claim
+                name: backstage-claim
           volumeMounts:
             - name: ca-cert
               mountPath: "/mnt/certs"
