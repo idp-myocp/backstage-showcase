@@ -13,5 +13,4 @@ nav:
       - Migration Process Overview: application-migration/migration-process-overview.md
       - Migration Process Steps: application-migration/migration-process-steps.md
       - Learning Path for Developers: application-migration/learning-path-for-developers.md
-
-  - Backstage setup:
+  - Backstage setup: application-migration/backstage-setup.md
