@@ -63,7 +63,7 @@
       {
         "iconUrl": "/homepage/icons/sonarqube.svg",
         "label": "SonarQube",
-        "url": "https://sonarqube-sonar9.apps.home.myocp.net/"
+        "url": "https://sonarqube-sonarqube.apps.home.myocp.net"
       },
       {
         "iconUrl": "/homepage/icons/quay.svg",
