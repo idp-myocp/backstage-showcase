@@ -23,7 +23,7 @@ metadata:
     sonarqube.org/project-key: janus-idp_backstage-showcase
 #    nexus-repository-manager/docker.image-name: backstage-showcase
 #    jfrog-artifactory/image-name: backstage-showcase
-    quay.io/repository-slug: idp-myocp/backstage-showcase
+    quay.io/repository-slug: froberge/backstage-showcase
 
 spec:
   type: website
