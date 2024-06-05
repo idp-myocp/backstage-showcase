@@ -27,8 +27,8 @@ import StorageIcon from '@mui/icons-material/Storage';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import React, { PropsWithChildren } from 'react';
 import { makeStyles } from 'tss-react/mui';
-import LogoFull from './LogoFull-bnc';
-import LogoIcon from './LogoIcon-bnc';
+import LogoFull from './LogoFull-custom';
+import LogoIcon from './LogoIcon-custom';
 
 const useStyles = makeStyles()({
   sidebarLogo: {
