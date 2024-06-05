@@ -54,4 +54,7 @@ site
 **/cypress/screenshots
 
 #tekton
-.tekton/quay-credentials.yml
+.tekton /quay-credentials.yml
+
+# Rename old files
+*-old.*
