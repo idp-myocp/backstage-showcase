@@ -89,7 +89,7 @@ export const HomePage = () => {
   return (
     <SearchContextProvider>
       <Page themeId="home">
-        <Header title="Welcome back!" />
+        <Header title="Welcome back!" style={{ color: 'black'}}/>
         <Content>
           <Box
             sx={{
@@ -97,6 +97,7 @@ export const HomePage = () => {
               flexDirection: 'column',
               alignItems: 'center',
               gap: 2,
+              color: 'red'
             }}
           >
             {/* useStyles has a lower precedence over mui styles hence why we need to use css */}

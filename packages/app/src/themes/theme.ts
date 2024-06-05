@@ -20,10 +20,10 @@ export const customTheme = createUnifiedTheme({
   palette: {
     ...themes.light.getTheme('v5')?.palette,
     navigation: {
-      background: '#222427',
+      background: '#8cd3ff',
       indicator: '#009596',
       color: '#ffffff',
-      selectedColor: '#ffffff',
+      selectedColor: '#b12626',
       navItem: {
         hoverBackground: '#4f5255',
       },
@@ -31,15 +31,15 @@ export const customTheme = createUnifiedTheme({
   },
   defaultPageTheme: 'home',
   pageTheme: {
-    home: genPageTheme({ colors: ['#005f60', '#73c5c5'], shape: shapes.wave }),
-    app: genPageTheme({ colors: ['#005f60', '#73c5c5'], shape: shapes.wave }),
-    apis: genPageTheme({ colors: ['#005f60', '#73c5c5'], shape: shapes.wave }),
+    home: genPageTheme({ colors: ['#8cd3ff', '#eaf4fa'], shape: shapes.wave }),
+    app: genPageTheme({ colors: ['#8cd3ff', '#eaf4fa'], shape: shapes.wave }),
+    apis: genPageTheme({ colors: ['#8cd3ff', '#eaf4fa'], shape: shapes.wave }),
     documentation: genPageTheme({
-      colors: ['#005f60', '#73c5c5'],
+      colors: ['#8cd3ff', '#eaf4fa'],
       shape: shapes.wave,
     }),
-    tool: genPageTheme({ colors: ['#005f60', '#73c5c5'], shape: shapes.round }),
-    other: genPageTheme({ colors: ['#005f60', '#73c5c5'], shape: shapes.wave }),
+    tool: genPageTheme({ colors: ['#8cd3ff', '#eaf4fa'], shape: shapes.round }),
+    other: genPageTheme({ colors: ['#8cd3ff', '#eaf4fa'], shape: shapes.wave }),
   },
   components: {
     MuiCssBaseline: {
