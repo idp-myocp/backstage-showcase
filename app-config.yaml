@@ -76,11 +76,11 @@ auth:
         clientSecret: temp
 
 techdocs:
-  builder: external
+  builder: local
   generator:
     runIn: local
   publisher:
-    type: awsS3
+    type: local
 
 lighthouse:
   baseUrl: temp
