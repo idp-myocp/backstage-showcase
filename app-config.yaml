@@ -1,5 +1,5 @@
 app:
-  title: Janus IDP Backstage Showcase
+  title: IDP Red Hat Developer Hub Demo
   baseUrl: http://localhost:3000
   analytics:
     segment:
