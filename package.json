@@ -55,5 +55,8 @@
     "*": "yarn run prettier:fix",
     "*.{js,jsx,ts,tsx,mjs,cjs}": "yarn run lint -- -- --fix"
   },
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "dependencies": {
+    "@janus-idp/backstage-plugin-aap-backend": "^1.6.15"
+  }
 }
