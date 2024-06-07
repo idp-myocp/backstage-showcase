@@ -46,6 +46,7 @@
     "@backstage/plugin-techdocs-backend": "^1.9.2",
     "@immobiliarelabs/backstage-plugin-gitlab-backend": "6.1.0",
     "@janus-idp/backstage-plugin-3scale-backend": "1.1.1",
+    "@janus-idp/backstage-plugin-aap-backend": "^1.6.15",
     "@janus-idp/backstage-plugin-keycloak-backend": "1.5.3",
     "@janus-idp/backstage-plugin-ocm-backend": "3.1.1",
     "@janus-idp/backstage-plugin-rbac-backend": "1.1.0",

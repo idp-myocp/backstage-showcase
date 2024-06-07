@@ -15,6 +15,8 @@ import { MicrocksApiEntityProvider } from '@microcks/microcks-backstage-provider
 import { ThreeScaleApiEntityProvider } from '@janus-idp/backstage-plugin-3scale-backend';
 import { MicrosoftGraphOrgEntityProvider } from '@backstage/plugin-catalog-backend-module-msgraph';
 import { BitbucketServerEntityProvider } from '@backstage/plugin-catalog-backend-module-bitbucket-server';
+import { AapResourceEntityProvider } from '@janus-idp/backstage-plugin-aap-backend';
+
 
 export default async function createPlugin(
   env: PluginEnvironment,
@@ -145,6 +147,13 @@ export default async function createPlugin(
       }),
     );
   }
+
+  builder.addEntityProvider(
+    AapResourceEntityProvider.fromConfig(env.config, {
+      logger: env.logger,
+      scheduler: env.scheduler,
+    }),
+  );
 
   builder.setPlaceholderResolver('openapi', jsonSchemaRefPlaceholderResolver);
   builder.setPlaceholderResolver('asyncapi', jsonSchemaRefPlaceholderResolver);
