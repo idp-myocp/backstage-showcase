@@ -48,7 +48,7 @@
         "iconUrl": "/homepage/icons/podman_logo.svg",
         "label": "Podman Desktop",
         "url": "https://podman-desktop.io"
-      }
+      },
       {
         "iconUrl": "/homepage/icons/aap-small-icon.png",
         "label": "Ansible Automation Platform",
