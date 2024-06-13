@@ -49,6 +49,11 @@
         "label": "Podman Desktop",
         "url": "https://podman-desktop.io"
       }
+      {
+        "iconUrl": "/homepage/icons/aap-small-icon.png",
+        "label": "Ansible Automation Platform",
+        "url": "https://controller1-aap.apps.home.myocp.net/"
+      }
     ]
   },
   {
